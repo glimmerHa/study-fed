@@ -4,15 +4,18 @@ import Router from 'vue-router'
 import Layout from '~/views/layout/Layout'
 
 Vue.use(Router)
+export const asyncRoutes = [
 
-const constantRoute = [
+]
+export const constantRoutes = [
     {
         path: '/',
         component: Layout,
     },
 ]
 const router = new Router({
-    routes: constantRoute
+    scrollBehavior: () => ({ y: 0 }),
+    routes: constantRoutes
 })
 
 export default router
