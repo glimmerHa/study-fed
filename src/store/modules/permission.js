@@ -1,5 +1,4 @@
 import { asyncRoutes, constantRoutes } from '@/router'
-import { resolve } from 'dns';
 
 /**
  * 
@@ -37,6 +36,8 @@ const state = {
 }
 const mutations = {
     SET_ROUTES:(state, routes)=>{
+        console.log('constantRoutes', constantRoutes)
+        console.log('asyncRoutes', asyncRoutes)
         state.addRoutes = routes
         state.routes = constantRoutes.concat(routes)
     }
